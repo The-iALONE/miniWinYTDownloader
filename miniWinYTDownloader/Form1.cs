@@ -7,6 +7,7 @@ using System.Drawing;
 using System.IO;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -52,15 +53,41 @@ namespace miniWinYTDownloader
                 "%(title)s.%(ext)s"
             );
 
-            var proc = new ProcessStartInfo
+            var psi = new ProcessStartInfo
             {
                 FileName = exe,
-                Arguments = $"-f best -o \"{output}\" {url}",
+                Arguments = $"-f best --newline -o \"{output}\" {url}",
+                RedirectStandardOutput = true,
                 UseShellExecute = false,
                 CreateNoWindow = true
             };
 
-            Process.Start(proc);
+            Process process = Process.Start(psi)!;
+
+            while (!process.StandardOutput.EndOfStream)
+            {
+                var line = process.StandardOutput.ReadLine();
+                if (line == null) continue;
+
+                var match = Regex.Match(line, @"(\d{1,3}\.\d)");
+
+                if (match.Success) {
+                    int precent = (int)float.Parse(match.Groups[1].Value);
+
+                    webView21.Invoke(new Action(() =>
+                    {
+                        webView21.CoreWebView2.PostWebMessageAsJson(
+                            $"{{\"type\":\"progress\",\"value\":{precent}}}"
+                        );
+                    }));
+                }
+            }
+            webView21.Invoke(new Action(() =>
+            {
+                webView21.CoreWebView2.PostWebMessageAsJson(
+                    $"{{\"type\":\"progress\",\"value\":100}}"
+                );
+            }));
         }
     }
 }

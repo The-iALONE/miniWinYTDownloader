@@ -94,13 +94,15 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="ui\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Content Include="tools\yt-dlp.exe">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="ui\assets\index-Dnfm04So.js" />
+    <Content Include="ui\assets\index-DQ3P1g1z.css" />
+    <Content Include="ui\index.html" />
+    <Content Include="ui\vite.svg" />
     <Content Include="yt-dlp.exe">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
