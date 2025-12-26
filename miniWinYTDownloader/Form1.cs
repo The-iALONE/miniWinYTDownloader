@@ -32,7 +32,7 @@ namespace miniWinYTDownloader
                 Microsoft.Web.WebView2.Core.CoreWebView2HostResourceAccessKind.Allow
             );
 
-            webView21.Source = new Uri("https://app.local/index.html"); // مهم!
+            webView21.Source = new Uri("https://app.local/index.html");
         }
 
         private void WebMessageReceived(object? sender, Microsoft.Web.WebView2.Core.CoreWebView2WebMessageReceivedEventArgs e)
