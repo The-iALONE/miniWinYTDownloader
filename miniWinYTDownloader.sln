@@ -1,9 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.12.35506.116 d17.12
+VisualStudioVersion = 17.12.35506.116
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "miniWinYTDownloader", "miniWinYTDownloader\miniWinYTDownloader.csproj", "{E1675642-3174-4591-B115-1665D8309D44}"
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "miniWinYouTubeDownloader Setup", "miniWinYouTubeDownloader Setup\miniWinYouTubeDownloader Setup.vdproj", "{7B119D4F-28F0-4DBE-92D0-7F28ED16AA00}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,10 +13,12 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{E1675642-3174-4591-B115-1665D8309D44}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{E1675642-3174-4591-B115-1665D8309D44}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E1675642-3174-4591-B115-1665D8309D44}.Debug|Any CPU.ActiveCfg = Release|Any CPU
+		{E1675642-3174-4591-B115-1665D8309D44}.Debug|Any CPU.Build.0 = Release|Any CPU
 		{E1675642-3174-4591-B115-1665D8309D44}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E1675642-3174-4591-B115-1665D8309D44}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7B119D4F-28F0-4DBE-92D0-7F28ED16AA00}.Debug|Any CPU.ActiveCfg = Release
+		{7B119D4F-28F0-4DBE-92D0-7F28ED16AA00}.Release|Any CPU.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
