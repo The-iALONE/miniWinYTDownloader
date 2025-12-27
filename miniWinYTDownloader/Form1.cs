@@ -34,6 +34,8 @@ namespace miniWinYTDownloader
             );
 
             webView21.Source = new Uri("https://app.local/index.html");
+            // webView21.CoreWebView2.OpenDevToolsWindow();
+
         }
 
         private void WebMessageReceived(object? sender, Microsoft.Web.WebView2.Core.CoreWebView2WebMessageReceivedEventArgs e)
