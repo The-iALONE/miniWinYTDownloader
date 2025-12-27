@@ -1,3 +1,3 @@
 # winYouTube Downloader
 
-This project is a mini YouTube Downloader for Windows OS under development.
+A lightweight YouTube video downloader for Windows currently under development.
