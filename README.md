@@ -15,9 +15,3 @@ Extract Release.rar file then you see two files:
 Run setup.exe and install it.
 After installation go to the path you specified for installation and run miniWinYTDownloader.exe
 Done!
-
-
-## Source Code
-
-[Source Code](https://github.com/The-iALONE/miniWinYTDownloader)
-
